@@ -1,0 +1,11 @@
+spring:
+  mail:
+    host: smtp.exmail.qq.com
+    username: 67568107@qq.com
+    nikename: Peter
+    password: test
+    port: 587
+    properties:
+      mail.smtp.auth: true
+      mail.stmp.starttls.enable: true
+      mail.smtp.starttls.required: true

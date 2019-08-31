@@ -13,6 +13,4 @@ public interface MemberRepository extends BaseRepository<Member> {
     Member findByNickName(String nickName);
 
     Member findByEmail(String email);
-
-    Integer deleteByIdIn(List<Long> idList);
 }
