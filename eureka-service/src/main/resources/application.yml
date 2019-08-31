@@ -1,0 +1,14 @@
+
+server:
+  port: 8101
+eureka:
+  client:
+    #是否将自己注册到Eureka-Server上,因为本服务是Eureka-Server，所以关掉
+    register-with-eureka: false
+    #是否从Eureka-Server中拉取注册信息，因这是个单节点Eureka，所以设置为false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${spring.application.name}:${server.port}/eureka
+spring:
+  application:
+    name: eureka

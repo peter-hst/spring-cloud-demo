@@ -1,0 +1,26 @@
+server:
+  port: 8201
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8101/eureka/
+  instance:
+    # 把自己的IP地址注册到eureka-server中
+    prefer-ip-address: true
+spring:
+  application:
+    name: member
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/memberdb?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT
+    username: root
+    password: admin
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL57Dialect
+  jackson:
+    date-format: yyyy-MM-DD HH:mm:ss
+    time-zone: GMT+8
