@@ -70,4 +70,13 @@ public abstract class CrudController<T extends BaseRepository<M>, M extends Modu
     public Result delete(@RequestBody List<Long> idList) {
         return deleteAfter(Result.ok(repository.deleteByIdIn(deleteBefore(idList)), "删除成功"));
     }
+    
+    protected Long getByIdBefore(Long id){
+        return id;
+    }
+
+    @GetMapping("/{id}")
+    public Result getById(@PathVariable("id") Long id){
+        return Result.ok(repository.getOne(getByIdBefore(id)));
+    }
 }
