@@ -50,3 +50,8 @@ hystrix:
           thread:
             timeoutInMilliseconds: 5000
           strategy: SEMAPHORE
+management:
+  endpoint:
+    web:
+      exposure:
+        include: "*"
