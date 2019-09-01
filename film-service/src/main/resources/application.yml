@@ -5,7 +5,7 @@ eureka:
     service-url:
       defaultZone: http://127.0.0.1:8101/eureka/
   instance:
-    # ���Լ���IP��ַע�ᵽeureka-server��
+    # 把自己的IP地址注册到eureka-server中
     prefer-ip-address: true
 spring:
   application:
@@ -24,3 +24,13 @@ spring:
   jackson:
     date-format: yyyy-MM-DD HH:mm:ss
     time-zone: GMT+8
+
+# 关于Feign的一些配置，
+feign:
+  compression:
+    request:
+      enabled: true
+      min-request-size: 2048
+      mime-types: text/xml,application/xml,application/json
+    response:
+      enabled: true
