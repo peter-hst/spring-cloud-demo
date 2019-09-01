@@ -28,3 +28,16 @@ Eureka Server 服务注册中心
 ```
 资源服务提供者，上传视频/图片/文件到七牛云存储
 ```
+
+---
+# Ribbon 组件测试
+```
+- 启动多个member-service实例
+
+- 启动film-serve实例
+
+- RestTemplateClient 测试：
+  [访问] (http://film:8401/film/ribbon/1)
+  
+- LoadServiceInstance 测试：
+  [访问] (http://film:8401/film/ribbon/instance)
