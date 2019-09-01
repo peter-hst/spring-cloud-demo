@@ -34,3 +34,19 @@ feign:
       mime-types: text/xml,application/xml,application/json
     response:
       enabled: true
+  # 开启feign对hystrix的支持，默认false
+  hystrix:
+    enabled: true
+  okhttp:
+    enabled: true
+    # 默认使用http-client
+  httpclient:
+    enabled: false
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+          strategy: SEMAPHORE
