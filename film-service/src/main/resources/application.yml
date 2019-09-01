@@ -5,7 +5,7 @@ eureka:
     service-url:
       defaultZone: http://127.0.0.1:8101/eureka/
   instance:
-    # °Ñ×Ô¼ºµÄIPµØÖ·×¢²áµ½eureka-serverÖĞ
+    # æŠŠè‡ªå·±çš„IPåœ°å€æ³¨å†Œåˆ°eureka-serverä¸­
     prefer-ip-address: true
 spring:
   application:
